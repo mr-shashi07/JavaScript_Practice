@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+
+<script>
+
+let a = prompt("enter a value");
+
+if(a %2 == 0){
+    alert("Even Number");
+}
+else{
+    alert("Odd Number");
+}
+
+// let a = prompt("enter a number");
+// if(a>75 && a<100){
+//     alert("A Grade")
+// }
+//  if(a>50 && a<100) {
+//     alert("Fail")
+// }
+
+// for(let i=1; i<=100; i++){
+//     document.write(i);
+//     document.write("<br>");
+
+// }
+
+
+// let a = "SHASHI";
+// a = a.length.toLocaleString();
+// document.write(a);
+
+// let a = prompt("Enter a Name");
+// let b = a+"@"+a.length;
+
+
+
+// alert(b);
+
+// for(let i=0)
+
+// function fibonacci() {
+//     let n = prompt("Enter the number of terms for Fibonacci series:");
+//     n = parseInt(n);
+//     // Input validation for short Fibonacci series
+//     if (n > 100) {
+//         alert("Please enter a number less than or equal to 100 for better visualization");
+//         return;
+//     }
+//     if (isNaN(n) || n <= 0) {
+//         alert("Please enter a valid positive number!");
+//         return;
+//     }
+
+//     let a = 0, b = 1;
+//     let result = "Fibonacci Series: ";
+    
+//     if (n === 1) {
+//         result += a;
+//     } else if (n === 2) {
+//         result += a + ", " + b;
+//     } else {
+//         result += a + ", " + b;
+//         for (let i = 3; i <= n; i++) {
+//             let c = a + b;
+//             result += ", " + c;
+//             a = b;
+//             b = c;
+//         }
+//     }
+    
+//     document.getElementById("output").innerHTML = result;
+// }
+
+for(let i=0; i<=100; i++){
+    if(i%2==0){
+        document.write(i);
+        document.write("<br>");
+    }
+}
+
+</script>
+
+<body>
+    <h1>Fibonacci Series Generator</h1>
+    <button onclick="fibonacci()">Generate Fibonacci Series</button>
+    <p id="output"></p>
+</body>
+</html>
