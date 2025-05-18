@@ -1,0 +1,72 @@
+<!-- function reverseNumber(number) {
+    if (number < 99 || number > 999) {
+    }
+    var reversedNumber = parseInt(number.toString().split('').reverse().join(''));
+    
+    return reversedNumber;
+    var num1 = parseInt(prompt("Enter first Integer"));
+    var num2 = parseInt(prompt("Enter second Integer"));
+}
+
+var originalNumber = 123;
+var reversed = reverseNumber(originalNumber);
+console.log("Original number:", originalNumber);
+console.log("Reversed number:", reversed); -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+</head>
+<body>
+    <h1>Reverse Number</h1>
+    <p>Enter integers: </p>
+    <input type="number" id="integer1" placeholder="Number">
+    <button onclick="displayLargestInteger()">Reverse</button>
+    <p id="result"></p>
+    <script>
+        function reverseNumber(num1) {
+            if (num1 < 99 || num1 > 999) {
+                return num1;
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number</title>
+</head>
+<body>
+    <h1>Reverse Number</h1>
+    <p>Enter a three-digit integer: </p>
+    <input type="number" id="integer1" placeholder="Number" min="100" max="999">
+    <button onclick="displayReversedNumber()">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+        function reverseNumber(num) {
+            let reversedNum = 0;
+            while (num > 0) {
+                let digit = num % 10;
+                reversedNum = reversedNum * 10 + digit;
+                num = Math.floor(num / 10);
+            }
+            return reversedNum;
+        }
+
+        function displayReversedNumber() {
+            const inputNum = parseInt(document.getElementById("integer1").value);
+            if (inputNum < 100 || inputNum > 999) {
+                document.getElementById("result").innerText = "Please enter a three-digit integer.";
+            } else {
+                const reversed = reverseNumber(inputNum);
+                document.getElementById("result").innerText = "Reversed number: " + reversed;
+            }
+        }
+    </script>
+</body>
+</html>
